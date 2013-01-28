@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- regular spring configuration file defining the beans for this bundle. 
+		The configuration of OSGi definitions is kept in a separate configuration 
+		file so that this file can easily be used for integration testing outside 
+		of an OSGi environment -->
+	<!-- Activate JPA annotations in Dao Layer -->
+	<context:annotation-config />
+
+	<!-- Define JPA Transaction Manager -->
+	<bean id="jpaTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory"></property>
+	</bean>
+
+	<bean id="bulletinBoardDao" class="com.thingtrack.bustrack.dao.impl.internal.BulletinBoardDaoImpl" />
+	<bean id="bulletinTypeDao" class="com.thingtrack.bustrack.dao.impl.internal.BulletinTypeDaoImpl" />
+	<bean id="gasStationDao" class="com.thingtrack.bustrack.dao.impl.internal.GasStationDaoImpl" />
+	<bean id="gasStationRegisterDao" class="com.thingtrack.bustrack.dao.impl.internal.GasStationRegisterDaoImpl" />
+	<bean id="gasStationStatusDao" class="com.thingtrack.bustrack.dao.impl.internal.GasStationStatusDaoImpl" />
+	<bean id="gasStationTypeDao" class="com.thingtrack.bustrack.dao.impl.internal.GasStationTypeDaoImpl" />
+	<bean id="gasTypeDao" class="com.thingtrack.bustrack.dao.impl.internal.GasTypeDaoImpl" />
+	<bean id="jobOfferDao" class="com.thingtrack.bustrack.dao.impl.internal.JobOfferDaoImpl" />
+	<bean id="jobOfferStatusDao" class="com.thingtrack.bustrack.dao.impl.internal.JobOfferStatusDaoImpl" />
+	<bean id="jobOfferTypeDao" class="com.thingtrack.bustrack.dao.impl.internal.JobOfferTypeDaoImpl" />
+	<bean id="offerRequestLineFixServiceDao" class="com.thingtrack.bustrack.dao.impl.internal.OfferRequestLineFixServiceDaoImpl" />
+	<bean id="offerRequestLineRegularServiceDao" class="com.thingtrack.bustrack.dao.impl.internal.OfferRequestLineRegularServiceDaoImpl" />
+	<bean id="routeDao" class="com.thingtrack.bustrack.dao.impl.internal.RouteDaoImpl" />
+	<bean id="routeStatusDao" class="com.thingtrack.bustrack.dao.impl.internal.RouteStatusDaoImpl" />
+	<bean id="serviceTemplateDao" class="com.thingtrack.bustrack.dao.impl.internal.ServiceTemplateDaoImpl" />
+	<bean id="stopDao" class="com.thingtrack.bustrack.dao.impl.internal.StopDaoImpl" />
+	<bean id="tireDao" class="com.thingtrack.bustrack.dao.impl.internal.TireDaoImpl" />
+	<bean id="tireStatusDao" class="com.thingtrack.bustrack.dao.impl.internal.TireStatusDaoImpl" />
+	<bean id="tireTypeDao" class="com.thingtrack.bustrack.dao.impl.internal.TireTypeDaoImpl" />
+	<bean id="turnDao" class="com.thingtrack.bustrack.dao.impl.internal.TurnDaoImpl" />
+	<bean id="vehicleDao" class="com.thingtrack.bustrack.dao.impl.internal.VehicleDaoImpl" />
+	<bean id="vehicleStatusDao" class="com.thingtrack.bustrack.dao.impl.internal.VehicleStatusDaoImpl" />
+	<bean id="vehicleTypeDao" class="com.thingtrack.bustrack.dao.impl.internal.VehicleTypeDaoImpl" />
+	<bean id="worksheetDao" class="com.thingtrack.bustrack.dao.impl.internal.WorksheetDaoImpl" />
+	<bean id="worksheetLineDao" class="com.thingtrack.bustrack.dao.impl.internal.WorksheetLineDaoImpl" />
+	<bean id="worksheetStatusDao" class="com.thingtrack.bustrack.dao.impl.internal.WorksheetStatusDaoImpl" />
+</beans>

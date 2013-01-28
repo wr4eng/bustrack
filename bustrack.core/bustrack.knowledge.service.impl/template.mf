@@ -1,0 +1,6 @@
+Excluded-Exports: 
+ *.internal*
+Unversioned-Imports: 
+ *
+Excluded-Imports: 
+ com.thingtrack.konekti.service.impl.internal

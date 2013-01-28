@@ -20,5 +20,6 @@
     <module>bustrack.service.web.client</module>
     <module>bustrack.knowledge.service.api</module>
     <module>bustrack.knowledge.service.impl</module>
+    <module>bustrack.domain</module>
   </modules>
 </project>

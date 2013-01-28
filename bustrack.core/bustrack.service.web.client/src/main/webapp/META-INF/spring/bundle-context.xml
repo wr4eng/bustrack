@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<!-- regular spring configuration file defining the beans for this bundle. 
+		The configuration of OSGi definitions is kept in a separate configuration 
+		file so that this file can easily be used for integration testing outside 
+		of an OSGi environment -->
+
+
+	<context:annotation-config />
+	<context:spring-configured />
+
+	<bean id="proxyFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+		<property name="serviceClass" value="com.thingtrack.bustrack.service.web.api.AddressServiceFacade" />
+		<property name="address" value="http://localhost:8080/cxf/ws/AddressService" />
+	</bean>
+
+	<bean id="wsclient" class="com.thingtrack.bustrack.service.web.api.AddressServiceFacade" factory-bean="proxyFactory"
+		factory-method="create" />
+
+
+	<!-- OSGi configuration for the Load Time Weaver -->
+	<context:load-time-weaver aspectj-weaving="on" />
+
+</beans>

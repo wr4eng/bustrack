@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:osgi="http://www.springframework.org/schema/osgi"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+  <!-- definitions using elements of the osgi namespace can be included
+       in this file. There is no requirement to keep these definitions
+       in a separate file if you do not want to. The rationale for 
+       keeping these definitions separate is to facilitate integration
+       testing of the bundle outside of an OSGi container -->
+       
+       	<osgi:reference id="entityManagerFactory" interface="javax.persistence.EntityManagerFactory" />
+
+		<osgi:service ref="bulletinBoardDao" interface="com.thingtrack.bustrack.dao.api.BulletinBoardDao"/>
+		<osgi:service ref="bulletinTypeDao" interface="com.thingtrack.bustrack.dao.api.BulletinTypeDao"/>
+		<osgi:service ref="gasStationDao" interface="com.thingtrack.bustrack.dao.api.GasStationDao"/>
+		<osgi:service ref="gasStationRegisterDao" interface="com.thingtrack.bustrack.dao.api.GasStationRegisterDao"/>
+		<osgi:service ref="gasStationStatusDao" interface="com.thingtrack.bustrack.dao.api.GasStationStatusDao"/>
+		<osgi:service ref="gasStationTypeDao" interface="com.thingtrack.bustrack.dao.api.GasStationTypeDao"/>
+	    <osgi:service ref="gasTypeDao" interface="com.thingtrack.bustrack.dao.api.GasTypeDao"/>
+		<osgi:service ref="jobOfferDao" interface="com.thingtrack.bustrack.dao.api.JobOfferDao"/>
+		<osgi:service ref="jobOfferStatusDao" interface="com.thingtrack.bustrack.dao.api.JobOfferStatusDao"/>
+		<osgi:service ref="jobOfferTypeDao" interface="com.thingtrack.bustrack.dao.api.JobOfferTypeDao"/>
+		<osgi:service ref="offerRequestLineFixServiceDao" interface="com.thingtrack.bustrack.dao.api.OfferRequestLineFixServiceDao"/>
+		<osgi:service ref="offerRequestLineRegularServiceDao" interface="com.thingtrack.bustrack.dao.api.OfferRequestLineRegularServiceDao"/>
+		<osgi:service ref="routeDao" interface="com.thingtrack.bustrack.dao.api.RouteDao"/>
+		<osgi:service ref="routeStatusDao" interface="com.thingtrack.bustrack.dao.api.RouteStatusDao"/>
+		<osgi:service ref="serviceTemplateDao" interface="com.thingtrack.bustrack.dao.api.ServiceTemplateDao"/>
+		<osgi:service ref="stopDao" interface="com.thingtrack.bustrack.dao.api.StopDao"/>
+		<osgi:service ref="tireDao" interface="com.thingtrack.bustrack.dao.api.TireDao"/>	    	    	    	    	   
+		<osgi:service ref="tireStatusDao" interface="com.thingtrack.bustrack.dao.api.TireStatusDao"/>
+		<osgi:service ref="tireTypeDao" interface="com.thingtrack.bustrack.dao.api.TireTypeDao"/>
+		<osgi:service ref="turnDao" interface="com.thingtrack.bustrack.dao.api.TurnDao"/>
+		<osgi:service ref="vehicleDao" interface="com.thingtrack.bustrack.dao.api.VehicleDao"/>
+	    <osgi:service ref="vehicleStatusDao" interface="com.thingtrack.bustrack.dao.api.VehicleStatusDao"/>
+	    <osgi:service ref="vehicleTypeDao" interface="com.thingtrack.bustrack.dao.api.VehicleTypeDao"/>
+	    <osgi:service ref="worksheetDao" interface="com.thingtrack.bustrack.dao.api.WorksheetDao"/>
+	    <osgi:service ref="worksheetLineDao" interface="com.thingtrack.bustrack.dao.api.WorksheetLineDao"/>
+	    <osgi:service ref="worksheetStatusDao" interface="com.thingtrack.bustrack.dao.api.WorksheetStatusDao"/>	    		
+</beans>
