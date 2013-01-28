@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+        <artifactId>bustrack</artifactId>
+        <groupId>com.thingtrack</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+  <artifactId>bustrack.modules</artifactId>
+  <packaging>pom</packaging>
+  <name>bustrack.modules</name>
+  <modules>
+    <module>bustrack.view.module.joboffer</module>
+    <module>bustrack.view.module.servicedesigner</module>
+    <module>bustrack.view.module.turn</module>
+    <module>bustrack.view.module.servicetemplate</module>
+    <module>bustrack.view.module.offerrequest</module>
+    <module>bustrack.view.module.offer</module>
+    <module>bustrack.view.module.invoice</module>
+    <module>bustrack.view.module.worksheet</module>
+    <module>bustrack.view.module.tire</module>
+    <module>bustrack.view.module.vehicle</module>
+    <module>bustrack.view.module.organization</module>
+    <module>bustrack.view.module.bulletinboard</module>
+    <module>bustrack.view.module.gasstionregister</module>
+    <module>bustrack.view.module.scheduler</module>
+    <module>bustrack.view.module.service</module>
+  </modules>
+</project>

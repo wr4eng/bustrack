@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+        <artifactId>bustrack</artifactId>
+        <groupId>com.thingtrack</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+  <artifactId>bustrack.core</artifactId>
+  <packaging>pom</packaging>
+  <name>bustrack.core</name>
+  <modules>
+    <module>bustrack.service.api</module>
+    <module>bustrack.service.impl</module>
+    <module>bustrack.dao.api</module>
+    <module>bustrack.dao.impl</module>
+    <module>bustrack.view.web.form</module>
+    <module>bustrack.service.web</module>
+    <module>bustrack.service.web.api</module>
+    <module>bustrack.service.web.client</module>
+    <module>bustrack.knowledge.service.api</module>
+    <module>bustrack.knowledge.service.impl</module>
+  </modules>
+</project>
