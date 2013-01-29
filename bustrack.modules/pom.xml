@@ -4,11 +4,12 @@
   <parent>
         <artifactId>bustrack</artifactId>
         <groupId>com.thingtrack</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1.SNAPSHOT</version>
     </parent>
   <artifactId>bustrack.modules</artifactId>
   <packaging>pom</packaging>
   <name>bustrack.modules</name>
+  
   <modules>
     <module>bustrack.view.module.joboffer</module>
     <module>bustrack.view.module.servicedesigner</module>
@@ -22,8 +23,86 @@
     <module>bustrack.view.module.vehicle</module>
     <module>bustrack.view.module.organization</module>
     <module>bustrack.view.module.bulletinboard</module>
-    <module>bustrack.view.module.gasstionregister</module>
+    <module>bustrack.view.module.gasstationregister</module>
     <module>bustrack.view.module.scheduler</module>
     <module>bustrack.view.module.service</module>
   </modules>
+  
+  <dependencies>
+  	<dependency>
+			<groupId>org.vaadin.addons</groupId>
+			<artifactId>formbinder</artifactId>
+			<version>2.1.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.vaadin.addon</groupId>
+			<artifactId>confirmdialog</artifactId>
+			<version>1.2.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.vaadin.addons</groupId>
+			<artifactId>filteringtable</artifactId>
+			<version>0.7.3</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Konekti Domain Layer -->
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>konekti.domain</artifactId>
+			<version>${org.konekti.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Konekti Service API -->
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>konekti.service.api</artifactId>
+			<version>${org.konekti.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Konekti Kernel -->
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>konekti.view.kernel</artifactId>
+			<version>${org.konekti.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Konekti Custom Addons -->
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>konekti.view.addon</artifactId>
+			<version>${org.konekti.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Konekti Forms -->
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>konekti.view.web.form</artifactId>
+			<version>${org.konekti.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- Bustrack Service -->
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>bustrack.service.api</artifactId>
+			<version>${com.bustrack.version}</version>
+		</dependency>
+		
+		<!-- Bustrack Forms -->
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>bustrack.view.web.form</artifactId>
+			<version>${com.bustrack.version}</version>
+		</dependency>
+  </dependencies>
+  
 </project>

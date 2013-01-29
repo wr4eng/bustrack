@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+	<!-- definitions using elements of the osgi namespace can be included in 
+		this file. There is no requirement to keep these definitions in a separate 
+		file if you do not want to. The rationale for keeping these definitions separate 
+		is to facilitate integration testing of the bundle outside of an OSGi container -->
+
+	<!-- Enterprise Services -->
+	<osgi:reference id="serviceService"
+		interface="com.thingtrack.konekti.service.api.ServiceService" />
+
+	<osgi:reference id="serviceStatusService"
+		interface="com.thingtrack.konekti.service.api.ServiceStatusService" />
+
+	<osgi:reference id="serviceTypeService"
+		interface="com.thingtrack.konekti.service.api.ServiceTypeService" />
+
+	<osgi:reference id="vehicleService"
+		interface="com.thingtrack.bustrack.service.api.VehicleService" />
+
+	<osgi:reference id="vehicleTypeService"
+		interface="com.thingtrack.bustrack.service.api.VehicleTypeService" />
+
+	<osgi:reference id="vehicleStatusService"
+		interface="com.thingtrack.bustrack.service.api.VehicleStatusService" />
+
+	<osgi:reference id="supplierService"
+		interface="com.thingtrack.konekti.service.api.SupplierService" />
+
+	<osgi:reference id="clientService"
+		interface="com.thingtrack.konekti.service.api.ClientService" />
+
+	<osgi:reference id="turnService"
+		interface="com.thingtrack.bustrack.service.api.TurnService" />
+
+	<osgi:reference id="employeeAgentService"
+		interface="com.thingtrack.konekti.service.api.EmployeeAgentService" />
+
+	<osgi:reference id="routeStatusService"
+		interface="com.thingtrack.bustrack.service.api.RouteStatusService" />
+
+	<osgi:reference id="menuWorkbenchService"
+		interface="com.thingtrack.konekti.service.api.MenuWorkbenchService" />
+
+	<osgi:reference id="addressService"
+		interface="com.thingtrack.konekti.service.api.AddressService" />
+
+	<!-- Register the Module Service -->
+	<osgi:service ref="schedulerModule"
+		interface="com.thingtrack.konekti.view.kernel.IModule" />
+
+</beans>

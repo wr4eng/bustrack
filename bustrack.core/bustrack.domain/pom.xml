@@ -5,11 +5,9 @@
   <parent>
     <groupId>com.thingtrack</groupId>
     <artifactId>bustrack.core</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1.SNAPSHOT</version>
   </parent>
-  <groupId>com.thingtrack</groupId>
   <artifactId>bustrack.domain</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>bustrack.domain</name>
   <url>http://maven.apache.org</url>
   <properties>

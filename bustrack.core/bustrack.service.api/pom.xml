@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.thingtrack</groupId>
 		<artifactId>bustrack.core</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1.SNAPSHOT</version>
 	</parent>
 	<artifactId>bustrack.service.api</artifactId>
 	<name>bustrack.service.api</name>
