@@ -97,6 +97,13 @@
 			<version>${com.bustrack.version}</version>
 		</dependency>
 		
+		<!-- Bustrack Knowledge Service -->
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>bustrack.knowledge.service.api</artifactId>
+			<version>${com.bustrack.version}</version>
+		</dependency>
+		
 		<!-- Bustrack Forms -->
 		<dependency>
 			<groupId>com.thingtrack</groupId>
