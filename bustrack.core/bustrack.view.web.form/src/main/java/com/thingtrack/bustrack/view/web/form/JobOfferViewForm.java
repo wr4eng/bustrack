@@ -100,6 +100,10 @@ public class JobOfferViewForm extends CustomComponent {
 		
 		jobOfferDateField.setDateFormat("dd/MM/yyyy HH:mm");
 		
+		jobOfferTypeField.setNullSelectionAllowed(false);
+		jobOfferStatusField.setNullSelectionAllowed(false);
+		
+		tittleField.focus();
 	}
 	
 

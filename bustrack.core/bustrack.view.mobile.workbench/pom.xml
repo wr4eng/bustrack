@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>bustrack.core</artifactId>
+    <groupId>com.thingtrack</groupId>
+    <version>0.0.1.SNAPSHOT</version>
+  </parent>
+  <groupId>com.thingtrack</groupId>
+  <artifactId>bustrack.view.mobile.workbench</artifactId>
+  <version>0.0.1.SNAPSHOT</version>
+  <name>bustrack.view.mobile.workbench</name>
+  <description>Konekti View Mobile Workbench</description>
+  <packaging>war</packaging>
+  	
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <!-- ================================================ -->
+	<!-- Build Configuration -->
+	<!-- ================================================ -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.virgo.bundlor</groupId>
+				<artifactId>org.eclipse.virgo.bundlor.maven</artifactId>
+				<version>1.1.1.RELEASE</version>
+				<configuration>
+					<outputPath>${basedir}/src/main/webapp</outputPath>
+					<manifestTemplate>
+					<![CDATA[
+Bundle-ManifestVersion: 2
+Bundle-Name: ${project.name}
+Bundle-Description: ${description}
+Bundle-SymbolicName: ${project.groupId}.${project.artifactId}
+Bundle-Version: ${project.version}
+Built-By: ${organization.name}
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.vaadin, 
+ com.vaadin.terminal.gwt.server,
+ com.vaadin.terminal.gwt.client.ui.dd,
+ com.vaadin.terminal, 
+ com.vaadin.tools,
+ com.vaadin.event, 
+ com.vaadin.event.dd, 
+ com.vaadin.event.dd.acceptcriteria,
+ com.vaadin.data,
+ com.vaadin.ui,
+ com.vaadin.annotations,
+ org.aspectj.lang,
+ org.aspectj.runtime.reflect, 
+ org.aspectj.lang.annotation,
+ org.eclipse.virgo.web.dm,
+ com.thingtrack.konekti.service.security
+Web-ContextPath: bustrack.view.mobile.workbench
+Bundle-Classpath: WEB-INF/classes
+Import-Library: 
+ org.springframework.spring;version="[3.0.5.RELEASE,3.0.5.RELEASE]"
+]]>
+				</manifestTemplate>
+				</configuration>
+				<!-- generate the manifest automatically during packaging -->
+				<executions>
+					<execution>
+						<id>bundlor</id>
+						<goals>
+							<goal>bundlor</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webResources>
+						<webResource>
+							<directory>src/main/resources</directory>
+						</webResource>
+					</webResources>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  
+
+  	<!-- ================================================ -->
+	<!-- Dependencies Configuration 					  -->
+	<!-- ================================================ -->		
+	<dependencies>
+	    
+	    <!-- Vaadin dependecies -->
+		<dependency>
+			<groupId>org.dellroad</groupId>
+			<artifactId>dellroad-stuff-vaadin</artifactId>
+			<version>1.0.284</version>
+			<scope>provided</scope>
+		</dependency>
+			
+		
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>com.vaadin.addons.springstuff.mobile</artifactId>
+			<version>0.0.1.SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>com.vaadin.addons.osgi.mobile</artifactId>
+			<version>0.0.1.SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>	
+							
+		<dependency>
+			<groupId>com.vaadin.addon</groupId>
+			<artifactId>vaadin-touchkit-agpl</artifactId>
+			<version>${com.vaadin.touchkit.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- GWT dependencies -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${com.google.gwt.version}</version>
+			<scope>provided</scope>
+		</dependency>
+			
+		<dependency>
+   			<groupId>org.vaadin.addons</groupId>
+   			<artifactId>sessionguard</artifactId>
+   			<version>0.0.5</version>
+			<type>jar</type>
+			<scope>provided</scope>   			
+		</dependency>
+		
+		<!-- KONEKTI dependencies -->
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>konekti.domain</artifactId>
+			<version>${org.konekti.version}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>konekti.dao.template</artifactId>
+			<version>${org.konekti.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>konekti.service.api</artifactId>
+			<version>${org.konekti.version}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>konekti.service.security</artifactId>
+			<version>${org.konekti.version}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+					     	
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>konekti.service.sensor.api</artifactId>
+			<version>0.0.1.SNAPSHOT</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- BUSTRACK dependencies -->
+		<dependency>
+			<groupId>com.thingtrack</groupId>
+			<artifactId>bustrack.service.api</artifactId>
+			<version>${com.bustrack.version}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	
+	<profiles>
+	    <profile>
+	        <id>widgetset</id>
+	        <build>
+	            <plugins>
+	               <plugin>
+				        <groupId>org.codehaus.mojo</groupId>
+				        <artifactId>gwt-maven-plugin</artifactId>
+				        <version>2.2.0</version>
+				        <configuration>
+				          <webappDirectory>src/main/resources/VAADIN/widgetsets</webappDirectory>
+				          <extraJvmArgs>-Xmx512M -Xss1024k</extraJvmArgs>
+				          <runTarget>db4o.web</runTarget>
+				          <hostedWebapp>${project.build.directory}/${project.build.finalName}</hostedWebapp>
+				          <noServer>true</noServer>
+				          <port>8080</port>
+				          <compileReport>false</compileReport>
+				        </configuration>
+				        <executions>
+				          <execution>
+				            <goals>
+				              <goal>resources</goal>
+				              <goal>compile</goal>
+				            </goals>
+				          </execution>
+				        </executions>
+				        <dependencies>
+				          <dependency>
+				            <groupId>com.google.gwt</groupId>
+				            <artifactId>gwt-dev</artifactId>
+				            <version>${com.google.gwt.version}</version>
+				          </dependency>
+				          <dependency>
+				            <groupId>com.google.gwt</groupId>
+				            <artifactId>gwt-user</artifactId>
+				            <version>${com.google.gwt.version}</version>
+				          </dependency>
+				        </dependencies>
+			      </plugin>
+			      <plugin>
+			        <groupId>com.vaadin</groupId>
+			        <artifactId>vaadin-maven-plugin</artifactId>
+			        <version>1.0.2</version>
+			        <executions>
+			          <execution>
+			            <configuration>
+			            </configuration>
+			            <goals>
+			              <goal>update-widgetset</goal>
+			            </goals>
+			          </execution>
+			        </executions>
+			      </plugin>		      		
+		 		</plugins>
+	        </build>
+	    </profile>
+	</profiles>
+</project>

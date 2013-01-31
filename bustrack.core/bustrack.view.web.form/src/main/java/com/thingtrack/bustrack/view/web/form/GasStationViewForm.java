@@ -87,6 +87,7 @@ public class GasStationViewForm extends CustomComponent {
 		codeField.setNullRepresentation("");
 		commentField.setNullRepresentation("");
 		
+		codeField.focus();
 	}
 	
 	
@@ -142,6 +143,7 @@ public class GasStationViewForm extends CustomComponent {
 		codeField.setImmediate(false);
 		codeField.setWidth("120px");
 		codeField.setHeight("-1px");
+		codeField.setRequired(true);
 		mainLayout.addComponent(codeField, "top:20.0px;left:20.0px;");
 		
 		// commentField

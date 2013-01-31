@@ -1,18 +1,10 @@
 package com.thingtrack.bustrack.view.module.servicetemplate.addon;
 
-import java.io.ByteArrayInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.Serializable;
-import java.util.List;
 
 import org.vaadin.peter.buttongroup.ButtonGroup;
 
 import com.thingtrack.bustrack.domain.ServiceTemplate;
-import com.thingtrack.bustrack.view.module.servicetemplate.addon.parser.ServiceTemplateParser;
-import com.thingtrack.bustrack.view.module.servicetemplate.addon.parser.exception.NoServiceException;
-import com.thingtrack.bustrack.view.module.servicetemplate.addon.parser.exception.ServiceParsingException;
-import com.thingtrack.konekti.domain.Service;
 import com.thingtrack.konekti.view.addon.data.BindingSource;
 import com.thingtrack.konekti.view.addon.data.BindingSource.IndexChangeEvent;
 import com.thingtrack.konekti.view.addon.data.BindingSource.IndexChangeListener;

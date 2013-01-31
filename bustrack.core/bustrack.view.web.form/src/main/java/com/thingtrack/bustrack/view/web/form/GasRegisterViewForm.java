@@ -84,6 +84,11 @@ public class GasRegisterViewForm extends CustomComponent {
 		commentField.setNullRepresentation("");
 		
 		gasStationRegisterDateField.setDateFormat("dd/MM/yyyy HH:mm");
+		
+		gasStationField.setNullSelectionAllowed(false);
+		gasTypeField.setNullSelectionAllowed(false);
+		
+		gasStationField.focus();
 	}
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })

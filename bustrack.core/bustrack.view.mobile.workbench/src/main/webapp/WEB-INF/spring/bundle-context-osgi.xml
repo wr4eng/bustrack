@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:osgi="http://www.springframework.org/schema/osgi"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+  <!-- definitions using elements of the osgi namespace can be included
+       in this file. There is no requirement to keep these definitions
+       in a separate file if you do not want to. The rationale for 
+       keeping these definitions separate is to facilitate integration
+       testing of the bundle outside of an OSGi container -->	    
+       
+       <!-- Security services-->
+       <osgi:reference id="securityService" interface="com.thingtrack.konekti.service.security.SecurityService" />
+       <osgi:reference id="userService" interface="com.thingtrack.konekti.service.api.UserService" />
+       
+       <!-- Bussines services-->
+       <osgi:reference id="sensorLocationService" interface="com.thingtrack.konekti.service.sensor.api.SensorLocationService" />
+       <osgi:reference id="sensorTelemetryService" interface="com.thingtrack.konekti.service.sensor.api.SensorTelemetryService" />
+       <osgi:reference id="sensorMessageService" interface="com.thingtrack.konekti.service.sensor.api.SensorMessageService" />
+       <osgi:reference id="employeeAgentService" interface="com.thingtrack.konekti.service.api.EmployeeAgentService" />
+       <osgi:reference id="worksheetService" interface="com.thingtrack.bustrack.service.api.WorksheetService" />
+       <osgi:reference id="vehicleService" interface="com.thingtrack.bustrack.service.api.VehicleService" />
+       <osgi:reference id="routeService" interface="com.thingtrack.bustrack.service.api.RouteService" />
+       <osgi:reference id="stopService" interface="com.thingtrack.bustrack.service.api.StopService" />
+</beans>

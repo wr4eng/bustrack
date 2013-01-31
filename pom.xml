@@ -37,6 +37,8 @@
 		<javax.persistence.version>2.0.0</javax.persistence.version>
 		<javax.validation.version>1.0.0.GA</javax.validation.version>
 		<com.bustrack.version>0.0.1.SNAPSHOT</com.bustrack.version>
+		<com.google.gwt.version>2.3.0</com.google.gwt.version>
+		<com.vaadin.touchkit.version>2.1.0</com.vaadin.touchkit.version>
 	</properties>
 
 	<dependencies>

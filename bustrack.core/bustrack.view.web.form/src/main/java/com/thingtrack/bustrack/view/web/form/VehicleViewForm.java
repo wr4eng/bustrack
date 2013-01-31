@@ -112,7 +112,7 @@ public class VehicleViewForm extends CustomComponent {
 
 		// TODO add user code here		
 		initComponents();
-				
+								
 		// configure Organization Type data
 		sensorTelemetryField.setItemCaptionMode(Select.ITEM_CAPTION_MODE_PROPERTY);
 		sensorTelemetryField.setItemCaptionPropertyId("description");
@@ -137,7 +137,7 @@ public class VehicleViewForm extends CustomComponent {
 				
 	}
 	
-	private void initComponents() {
+	private void initComponents() {		
 		//sensorTelemetryDescriptionField.setNullRepresentation("");
 		vehicleNumberField.setNullRepresentation("");
 		seatingsField.setNullRepresentation("");
@@ -154,6 +154,7 @@ public class VehicleViewForm extends CustomComponent {
 		
 		organizationsField.setCaption("Organizaciones");
 		
+		vehicleNumberField.focus();
 	}
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })

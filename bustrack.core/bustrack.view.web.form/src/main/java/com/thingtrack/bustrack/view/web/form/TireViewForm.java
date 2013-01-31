@@ -110,6 +110,8 @@ public class TireViewForm extends CustomComponent {
 		commentField.setNullRepresentation("");
 		
 		serialNumberField.selectAll();
+		
+		serialNumberField.focus();
 	}
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })

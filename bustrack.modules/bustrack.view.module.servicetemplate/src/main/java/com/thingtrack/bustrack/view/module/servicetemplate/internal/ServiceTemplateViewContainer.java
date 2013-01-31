@@ -31,7 +31,7 @@ public class ServiceTemplateViewContainer extends AbstractViewContainer {
 
 	/** Views **/
 	private ServiceTemplateView serviceTemplateView;
-		
+	
 	/** Business services **/
 	@Autowired
 	private ServiceService serviceService;
@@ -84,12 +84,12 @@ public class ServiceTemplateViewContainer extends AbstractViewContainer {
 		threadRouteStatusService.set(routeStatusService);
 		
 		threadContext.set(context);
-		
-		
+				
 		// add all views controlled by SliderView Component
-		serviceTemplateView = new ServiceTemplateView(this);
+		serviceTemplateView = new ServiceTemplateView(context, this);
 		sliderView.addView(serviceTemplateView);
 		views.put(0, serviceTemplateView);
+		
 	}
 
 	@SuppressWarnings("unused")
