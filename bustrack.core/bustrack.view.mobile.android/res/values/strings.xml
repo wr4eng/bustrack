@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>   
+    <string name="app_name">com.thingtrack.bustrack.view.mobile.android</string>
+
+	<string name="actionbar_activity_not_found">Failed to open intent...</string>
+        
+    <!-- Settings Konekti Device Strings -->
+    <string name="activity_tittle_settings">Preferencias</string>
+        
+    <string name="settings_category_koneki_device">Dispositivo</string>
+    
+    <string name="settings_title_device_name">Dispositivo</string>
+    <string name="settings_summary_device_name">Nombre dispositivo</string>
+    <string name="settings_dialog_title_device_name">Nombre único del dispositivo</string>
+    <string name="settings_title_uri_konekti">URI Konekti Mobile</string>
+    <string name="settings_summary_uri_konekti">Dirección web del contenedor Konekti Mobile</string>
+    <string name="settings_dialog_title_uri_konekti">Dirección web del contenedor Konekti Mobile</string>
+    
+    <!-- Settings Konekti Location Sensor Strings -->
+    <string name="settings_category_koneki_sensor_location">Sensor Localización</string>
+    
+    <string name="settings_sensor_location_status">Activo</string>    
+    <string name="settings_sensor_location_min_distance">Distancia mínima</string>
+    <string name="settings_summary_sensor_location_min_distance">Distancia mínima[m]</string>
+    <string name="settings_dialog_sensor_location_min_distance">Distancia mínima [m]</string>
+    <string name="settings_sensor_location_min_time">Tiempo mínimo</string>
+    <string name="settings_summary_sensor_location_min_time">Tiempo mínimo [s]</string>
+    <string name="settings_dialog_sensor_location_min_time">Tiempo mínimo [s]</string>
+    
+    <!-- Settings Konekti Telemetry Sensor Strings -->
+    <string name="settings_category_koneki_sensor_telemetry">Sensor Telemétrico</string>
+    
+    <string name="settings_sensor_telemetry_status">Activo</string>  
+    <string name="settings_tittle_sensor_telemetry_name">Nombre</string> 
+    <string name="settings_summary_sensor_telemetry_name">Nombre telémetro</string>
+    <string name="settings_dialog_sensor_telemetry_name">Nombre telémetro</string>
+    <string name="settings_tittle_sensor_telemetry_passkey">Clave</string> 
+    <string name="settings_summary_sensor_telemetry_passkey">Clave de paso</string>
+    <string name="settings_dialog_sensor_telemetry_passkey">Clave de paso</string>
+    
+    <!-- Settings Message MQTT Service Strings -->
+    <string name="settings_category_koneki_message_protocol_service">Servicio Mensajería</string>
+    
+    <string name="settings_tittle_koneki_message_protocol_service_host">Servidor</string>
+    <string name="settings_summary_koneki_message_protocol_service_host">Nombre servidor</string>
+    <string name="settings_dialog_tittle_koneki_message_protocol_service_host">Nombre servidor</string>
+    <string name="settings_tittle_koneki_message_protocol_service_port">Puerto</string>
+    <string name="settings_summary_koneki_message_protocol_service_port">Puerto servidor</string>
+    <string name="settings_dialog_tittle_koneki_message_protocol_service_port">Puerto servidor</string>
+    <string name="settings_tittle_koneki_message_protocol_service_keepalive">KeepAlive</string>
+    <string name="settings_summary_koneki_message_protocol_service_keepalive">KeepAlive [s]</string>
+    <string name="settings_dialog_tittle_koneki_message_protocol_service_keepalive">KeepAlive [s]</string>
+    <string name="settings_tittle_koneki_message_protocol_service_qos">Calidad Servicio</string>
+    <string name="settings_summary_koneki_message_protocol_service_qos">Nivel Calidad Servicio</string>
+    <string name="settings_dialog_tittle_koneki_message_protocol_service_qos">Nivel Calidad Servicio</string>
+    <string-array name="setting_entries_koneki_message_protocol_service_qos">
+        <item>Nivel 0</item>
+        <item>Nivel 1</item>
+        <item>Nivel 2</item>
+    </string-array>
+    <string-array name="setting_values_koneki_message_protocol_service_qos">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    
+    <!-- Notifications Toolbar Strings -->
+    <string name="close">Close</string>
+    <string name="open">Open</string>
+    <string name="option1">Option 1</string>
+    <string name="option2">Option 2</string>
+    <string name="option3">Option 3</string>  
+</resources>

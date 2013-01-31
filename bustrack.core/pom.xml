@@ -22,5 +22,6 @@
 <!-- 		<module>bustrack.service.web.api</module> -->
 <!-- 		<module>bustrack.service.web.client</module> -->
     <module>bustrack.view.mobile.workbench</module>
+    <module>bustrack.view.mobile.android</module>
   </modules>
 </project>

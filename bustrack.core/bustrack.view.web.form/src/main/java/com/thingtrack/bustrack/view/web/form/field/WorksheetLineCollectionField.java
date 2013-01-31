@@ -212,9 +212,9 @@ public class WorksheetLineCollectionField extends CustomField {
 				DriverAssignmentColumn.DRIVER_ASSIGNMENT_COLUMN_ID,
 				VehicleAssignmentColumn.VEHICLE_ASSIGNMENT_COLUMN_ID });
 
-		assignableServiceTreeTable.setColumnHeaders(new String[] { "C˜digo",
+		assignableServiceTreeTable.setColumnHeaders(new String[] { "Codigo",
 				"Pasajeros", "Tipo", "Cliente", "Salida", "Origen", "Llegada",
-				"Destinao", "Conductor", "Veh’culo" });
+				"Destinao", "Conductor", "Vehiculo" });
 
 		// Column width
 		assignableServiceTreeTable
@@ -483,7 +483,7 @@ public class WorksheetLineCollectionField extends CustomField {
 
 				ComboBox availableVehiclesField = new ComboBox();
 				availableVehiclesField
-						.setInputPrompt("Asignar veh’culo a la ruta");
+						.setInputPrompt("Asignar vehiculo a la ruta");
 				availableVehiclesField.setImmediate(true);
 				availableVehiclesField.setWidth("100%");
 

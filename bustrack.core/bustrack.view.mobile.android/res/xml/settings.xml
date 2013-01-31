@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="@string/settings_category_koneki_device">
+        <EditTextPreference android:key="key_device_name"
+                android:title="@string/settings_title_device_name"
+                android:summary="@string/settings_summary_device_name"
+                android:dialogTitle="@string/settings_dialog_title_device_name"/>
+    	<EditTextPreference android:key="key_uri_konekti"
+                android:title="@string/settings_title_uri_konekti"
+                android:summary="@string/settings_summary_uri_konekti"
+                android:dialogTitle="@string/settings_dialog_title_uri_konekti"
+                android:defaultValue="http://127.0.0.1:8080/konekti.mobile" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_koneki_sensor_location">
+        <CheckBoxPreference
+        		android:key="key_sensor_location_status"
+        		android:title="@string/settings_sensor_location_status"
+        		android:defaultValue="false"/>
+        <EditTextPreference android:key="key_sensor_location_min_distance"
+                android:title="@string/settings_sensor_location_min_distance"
+                android:summary="@string/settings_summary_sensor_location_min_distance"
+                android:dialogTitle="@string/settings_dialog_sensor_location_min_distance"
+                android:defaultValue="1000" />
+        <EditTextPreference android:key="key_sensor_location_min_time"
+                android:title="@string/settings_sensor_location_min_time"
+                android:summary="@string/settings_summary_sensor_location_min_time"
+                android:dialogTitle="@string/settings_dialog_sensor_location_min_time"
+                android:defaultValue="60" />    
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_koneki_sensor_telemetry">
+        <CheckBoxPreference
+        		android:key="key_sensor_telemetry_status"
+        		android:title="@string/settings_sensor_telemetry_status"
+        		android:defaultValue="false"/>
+        <EditTextPreference android:key="key_sensor_telemetry_name"
+                android:title="@string/settings_tittle_sensor_telemetry_name"
+                android:summary="@string/settings_summary_sensor_telemetry_name"
+                android:dialogTitle="@string/settings_dialog_sensor_telemetry_name"
+                android:defaultValue="CANgineBT-FMS" /> 
+        <EditTextPreference android:key="key_sensor_telemetry_passkey"
+                android:title="@string/settings_tittle_sensor_telemetry_passkey"
+                android:summary="@string/settings_summary_sensor_telemetry_passkey"
+                android:dialogTitle="@string/settings_dialog_sensor_telemetry_passkey"
+                android:defaultValue="0000" />         
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_koneki_message_protocol_service">
+        <EditTextPreference android:key="key_koneki_message_protocol_service_host"
+                android:title="@string/settings_tittle_koneki_message_protocol_service_host"
+                android:summary="@string/settings_summary_koneki_message_protocol_service_host"
+                android:dialogTitle="@string/settings_dialog_tittle_koneki_message_protocol_service_host"
+                android:defaultValue="127.0.0.1" />
+        <EditTextPreference android:key="key_koneki_message_protocol_service_port"
+                android:title="@string/settings_tittle_koneki_message_protocol_service_port"
+                android:summary="@string/settings_summary_koneki_message_protocol_service_port"
+                android:dialogTitle="@string/settings_dialog_tittle_koneki_message_protocol_service_port"
+                android:defaultValue="1883" />
+        <EditTextPreference android:key="key_koneki_message_protocol_service_keepalive"
+                android:title="@string/settings_tittle_koneki_message_protocol_service_keepalive"
+                android:summary="@string/settings_summary_koneki_message_protocol_service_keepalive"
+                android:dialogTitle="@string/settings_dialog_tittle_koneki_message_protocol_service_keepalive"
+                android:defaultValue="1200" />
+        <ListPreference android:key="key_koneki_message_protocol_service_qos"
+                android:title="@string/settings_tittle_koneki_message_protocol_service_qos"
+                android:summary="@string/settings_summary_koneki_message_protocol_service_qos"
+                android:dialogTitle="@string/settings_dialog_tittle_koneki_message_protocol_service_qos"
+                android:entries="@array/setting_entries_koneki_message_protocol_service_qos"
+            	android:entryValues="@array/setting_values_koneki_message_protocol_service_qos"
+            	android:defaultValue="1"/>
+    </PreferenceCategory>    
+</PreferenceScreen>

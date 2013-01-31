@@ -48,7 +48,7 @@ public class VehicleOverlapValidator implements Validator {
 					if (previousRoute.getVehicle().equals(route.getVehicle())) {
 						errorMessage = "La ruta " + previousRoute.getCode()
 								+ " tiene un solapamiento con la ruta "
-								+ route.getCode() + "asignando el veh’culo "
+								+ route.getCode() + "asignando el vehiculo "
 								+ route.getVehicle().getVehicleNumber();
 						return false;
 					}
