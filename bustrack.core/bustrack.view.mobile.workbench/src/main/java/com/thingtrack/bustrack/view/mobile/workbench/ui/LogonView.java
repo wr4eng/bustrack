@@ -232,13 +232,13 @@ public class LogonView extends NavigationView {
 		ContextApp.setEmployeeAgent(employeeAgent);
 		
 		// save organization in the Application Context
-		if (employeeAgent.getDefaultOrganization() != null)
-			ContextApp.setOrganization(employeeAgent.getDefaultOrganization());
+		if (user.getDefaultOrganization() != null)
+			ContextApp.setOrganization(user.getDefaultOrganization());
 		else
 			ContextApp.setOrganization(null);
 		
 		// send initialization event				
-		String jsScript = "CONTEXT.init(" + employeeAgent.getDefaultOrganization().getOrganizationId()  + ", ";
+		String jsScript = "CONTEXT.init(" + user.getDefaultOrganization().getOrganizationId()  + ", ";
 		jsScript += user.getUserId() + ", ";
 		jsScript += "0, ";
 		jsScript += "0);";
